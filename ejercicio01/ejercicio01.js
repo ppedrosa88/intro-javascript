@@ -5,7 +5,7 @@
  * variables y retorne un string con las variables concatenadas.
  */
 
-function swapVariables() {
+function swapVariables(a, b) {
   //Escribe tu codigo aqui
 }
 
