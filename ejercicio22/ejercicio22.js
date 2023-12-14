@@ -5,7 +5,16 @@
  */
 
 function multiplosDeCien() {
-  //Escribe tu codigo aqui
+  let count = 0;
+
+  for(let i = 1; i <= 100; i++){
+    if( i % 2 === 0 || i % 3 === 0  ){
+      count++;
+      console.log(i)
+    }
+  }
+
+  return count;
 }
 
 module.exports = { multiplosDeCien };

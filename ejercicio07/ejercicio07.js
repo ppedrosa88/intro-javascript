@@ -6,8 +6,12 @@
  *  una cantidad de dinero insuficiente.
  */
 
-function cambioCliente() {
- //Escribe tu codigo aqui
+function cambioCliente( money, productCost ) {
+    if( money < productCost ) {
+        return 'pago insuficiente';
+    } else {
+        return money - productCost;
+    }
 }
 
 module.exports = { cambioCliente };

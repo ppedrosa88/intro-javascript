@@ -5,8 +5,19 @@
  *  el usuario no insertará numeros negativos.
  */
 
-function mediaArrayHastaMenosUno() {
-  //Escribe tu codigo aqui
+function mediaArrayHastaMenosUno( array ) {
+    let average = 0;
+    if(array[0] === -1){
+      console.log('-1 en posicion 0')
+      return average;
+    }
+    for(let i = 0; i < array.length; i++) {
+      if( array[i] !== -1 ){ 
+        average += array[i]
+      } else {
+        return average/i;
+      }
+    }
 }
 
 module.exports = { mediaArrayHastaMenosUno };

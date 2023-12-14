@@ -7,8 +7,18 @@
  *  diciendo 'Debes introducir sólo números. Inténtalo de nuevo'
  */
 
-function notaMedia() {
-  //Escribe tu codigo aqui
+function notaMedia(cal1, cal2, cal3, cal4, cal5) {
+    if (isNaN(cal1) || isNaN(cal2) || isNaN(cal3) || isNaN(cal4) || isNaN(cal5)) {
+      return "Debes introducir solo numeros. Intentalo de nuevo";
+    } 
+
+    const average = ( cal1 + cal2 + cal3 + cal4 + cal5 ) / 5;
+
+    if( average >= 5 ) {
+      return `${average} aprobado`
+    } else {
+      return `${average} suspenso`
+    }
 }
 
 module.exports = { notaMedia };

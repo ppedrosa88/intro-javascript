@@ -10,8 +10,23 @@
  *  del programa.
  */
 
-function adivinarContrasena() {
-  //Escribe tu codigo aqui
+function adivinarContrasena( array, pass ) {
+
+  for(let i = 0; i <= 3; i++){
+
+    if( array[i] === pass && i < 3 ){
+      console.log("Contraseña correcta, bienvenido");
+      return;
+    } else if( array[i] !== pass && i < 3 ){
+      console.log("Contraseña incorrecta, intentelo de nuevo")
+    }
+
+    if( i === 3) {
+      console.log("Has agotado tus intentos");
+      return;
+    }
+  }
+
 }
 
 module.exports = { adivinarContrasena };

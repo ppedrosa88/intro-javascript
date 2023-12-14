@@ -1,13 +1,3 @@
-// Ejercicio 14
-// Construir un algoritmo que resuelva el problema
-// que tienen unos surtidores de gasolina, que registran
-// lo que surten en galones, pero el precio de la gasolina
-// se fija en litros. El algoritmo debe calcular
-// e imprimir el precio que hay que cobrarle al cliente.
-
-// Precio gasolina = 1.333euros / litro
-// 1 galon = 3,78541 litros
-
 /**
  *  Ejercicio 14
  *  Construir un algoritmo que resuelva el problema que tienen unos surtidores
@@ -19,8 +9,12 @@
  *  1 galon = 3,78541 litros
  */
 
-function precioEnLitros() {
-  //Escribe tu codigo aqui
+function precioEnLitros( galons ) {
+
+  const litersPerGalon = 3.78541
+  const pricePerLiter = 1.333
+
+  return ( galons * litersPerGalon ) * pricePerLiter;
 }
 
 module.exports = { precioEnLitros };

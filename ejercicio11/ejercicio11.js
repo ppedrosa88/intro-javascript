@@ -13,8 +13,20 @@
  *  descuento correspondiente.
  */
 
-function descuentoCompra() {
-  //Escribe tu codigo aqui
+function descuentoCompra( totalPrice ) {
+
+  if( totalPrice <= 500 ){
+    return totalPrice;
+  } else if ( totalPrice > 500 && totalPrice <= 1000 ) {
+    return totalPrice - totalPrice * 0.05 ;
+  } else if ( totalPrice > 1000 && totalPrice <= 7000 ) {
+    return totalPrice - totalPrice * 0.1 ;
+  } else if ( totalPrice > 7000 && totalPrice <= 15000 ) {
+    return totalPrice - totalPrice * 0.2 ;
+  } else {
+    return totalPrice - totalPrice * 0.25 ;
+  }
+
 }
 
 module.exports = { descuentoCompra };

@@ -13,8 +13,33 @@
  *  Si todo es correcto el algorimo debera imprimir 'NombreAlumno tu nota final es de NotaFinal sobre 10'
  */
 
-function notaAlumno() {
-  //Escribe tu codigo aqui
+function notaAlumno( name, grade1, grade2, grade3 ) {
+  let average = 0;
+
+  if( name ){
+    if( areCorrectGrades([grade1, grade2, grade3]) ) {
+      average = (grade1 + grade2 + grade3) / 3;
+      return `${name} tu nota final es de ${average} sobre 10`
+    } else {
+      return "Ha habido un error con tus notas. Deben estar entre 1 y 10";
+    }
+  } else {
+    return "Error al recibir el nombre"
+  }
+
 }
+
+function areCorrectGrades( grades ){
+
+  for( let i = 0; i < grades.length; i++ ){
+    if ( grades[i] < 0 || grades[i] > 10) {
+      return false;
+    }
+  }
+  return true;
+
+}
+
+notaAlumno("pablo", 6,6,-6)
 
 module.exports = { notaAlumno };

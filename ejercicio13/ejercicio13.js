@@ -5,12 +5,14 @@
     La funcion debera retornar un string que diga La superficie es de 'x' o El perimetro es de 'x'
  */
 
-function calcularSuperficie() {
-  //Escribe tu codigo aqui
+function calcularSuperficie( base, height ) {
+    const surface =  base * height;
+    return `La superficie es de ${surface}`
 }
 
-function calcularPerimetro() {
-  //Escribe tu codigo aqui
+function calcularPerimetro( base, height ) {
+  const perimeter = 2 * ( base + height );
+    return `El perimetro es de ${perimeter}`
 }
 
 module.exports = { calcularPerimetro, calcularSuperficie };
