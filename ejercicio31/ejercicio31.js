@@ -12,8 +12,21 @@
  *  Deberas recordar la concatenacion y el uso de espacio en blanco (\n)
  */
 
-function crearTriangulo() {
-  //Escribe tu codigo aqui
+function crearTriangulo( N ) {
+  let toPrint = "";
+
+  for(let i = 0; i < N; i++){
+    for(let j = 0; j < N; j++){
+      if( j === i || j > i) {
+        toPrint += "*";
+      } else {
+        toPrint += " "
+      }
+    }
+    toPrint += "\n";
+  }
+  return toPrint;
+
 }
 
 module.exports = { crearTriangulo };

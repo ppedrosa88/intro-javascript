@@ -25,18 +25,46 @@
 
 // Apartado A --------------------------------------------------------------------------
 
-function trianguloConsola() {
-  //Escribe tu codigo aqui
+function trianguloConsola( N ) {
+
+  let toPrint = "";
+
+  for(let j = 1; j <= N; j++){
+    for(let i = 1; i <= j; i++) {
+      toPrint += `${i}`
+    }
+    toPrint += '\n';
+  }
+  return toPrint;
 }
 
 // Apartado B --------------------------------------------------------------------------
-function trianguloConsolaB() {
-  //Escribe tu codigo aqui
+function trianguloConsolaB( N ) {
+  let toPrint = "";
+
+  for(let j = 1; j <= N; j++){
+    for(let i = 1; i <= j; i++) {
+      toPrint += `${j}`
+    }
+    toPrint += '\n';
+  }
+  return toPrint;
 }
 
+
 // Apartado C --------------------------------------------------------------------------
-function trianguloConsolaC() {
-  //Escribe tu codigo aqui
+function trianguloConsolaC( N ) {
+  let toPrint = "";
+  let counter = 0
+
+  for(let j = 1; j <= N; j++){
+    for(let i = 1; i <= j; i++) {
+      toPrint += `${counter} `
+      counter++;
+    }
+    toPrint += '\n';
+  }
+  return toPrint;
 }
 
 module.exports = { trianguloConsola, trianguloConsolaB, trianguloConsolaC };

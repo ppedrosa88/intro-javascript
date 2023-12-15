@@ -8,11 +8,24 @@
  */
 
 function generateRandomNumber() {
-  //Escribe tu codigo aqui
+  return Math.floor(Math.random() * (10 - 1 + 1) + 1);
 }
 
 function playGame(randomNumber, arrayNum) {
-  //Escribe tu codigo aqui
+  
+  let count = 0;
+
+  while(count <= arrayNum.length){
+
+    if( arrayNum[count] === randomNumber ) {
+      console.log(`Exacto, has acertado en el ${count + 1} intento! el numero era el ${randomNumber}`);
+      return;
+    } else if(count === arrayNum.length) {
+      console.log("Ninguno de los numeros introducido coincide con el creado aleatoriamente");
+    }
+    count++;
+  }
+
 }
 module.exports = {
   generateRandomNumber,
