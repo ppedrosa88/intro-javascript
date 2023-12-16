@@ -9,11 +9,26 @@
  */
 
 function generateRandomArray() {
-  //Escribe tu codigo aqui
+  let newArray = [];
+
+  for(let i = 0; i < 10; i++) {
+
+      let randomNumber = Math.floor(Math.random() * 15) ;
+
+      newArray[i] = randomNumber;
+      
+  }
+  return newArray;
 }
 
-function findNumberInArray() {
-  //Escribe tu codigo aqui
+function findNumberInArray( array, number ) {
+  
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] === number){
+      return true;
+    }
+  }
+  return false;
 }
 
 module.exports = { findNumberInArray, generateRandomArray };

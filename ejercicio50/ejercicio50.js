@@ -8,8 +8,18 @@
  * letra en una frase que introduciremos por parametros.
  */
 
-function contarLetraEnOracion() {
-  //Escribe tu codigo aqui
+function contarLetraEnOracion( phrase, char ) {
+  
+  let count = 0;
+
+    for( let i = 0; i < phrase.length; i++ ) {
+      if( phrase[i] === char ){
+        count++;
+      }
+    }
+
+    return `La letra a está ${count} veces repetida`;
+
 }
 
 module.exports = { contarLetraEnOracion };

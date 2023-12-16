@@ -41,8 +41,11 @@
     "E"
  */
 
-function crearDni() {
-  //Escribe tu codigo aqui
+function crearDni( dniNumber ) {
+
+  const dniLetters = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"];
+
+  return `DNI Completo: ${dniNumber}${dniLetters[dniNumber % 23]}`;
 }
 
 module.exports = { crearDni };

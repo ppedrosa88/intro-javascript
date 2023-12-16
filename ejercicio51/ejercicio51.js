@@ -10,8 +10,17 @@
  * exactamente 1 y N (el mismo)
  */
 
-function getPrimeNumber() {
-  //Escribe tu codigo aqui
+function getPrimeNumber( number ) {
+  
+  for(let i = 1; i <= number; i++) {
+    if( i !== number && i !== 1) {
+      if( number % i === 0 ) {
+        return false;
+      }
+    }
+  } 
+  return true;
+
 }
 
 module.exports = { getPrimeNumber };
